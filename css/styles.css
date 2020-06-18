@@ -42,7 +42,7 @@ a {
 }
 body {
 	color: var(--primary-white-color);
-	font-family: OpenSans, sans-serif;
+	font-family: Open Sans, sans-serif;
 	background-color: black;
 }
 
@@ -58,7 +58,8 @@ body {
 }
 .container {
 	max-width: 1170px;
-
+	width: 100%;
+	height: 100%;
 	padding: 0 15px 0 15px;
 	margin: 0 auto 0 auto;
 
@@ -70,6 +71,7 @@ header {
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 9;
+	width: 100%;
 }
 .header {
 	display: flex;
@@ -82,7 +84,7 @@ header {
 }
 .tel-numbers {
 	margin-right: 78px;
-	font: 400 20px/0.657 OpenSans, sans-serif;
+	font: 400 20px/0.657 Open Sans, sans-serif;
 	color: rgb(255, 255, 255);
 }
 
@@ -96,7 +98,7 @@ header {
 	border-top-color: white;
 	position: absolute;
 	right: -15px;
-	top: 50%;
+	top: 80%;
 }
 .tel-numbers-sub {
 	position: absolute;
@@ -114,7 +116,7 @@ header {
 	opacity: 1;
 }
 .tel-numbers-main:hover:after {
-	transform: rotate(180deg) translateY(6px);
+	transform: rotate(180deg) translateY(3px);
 }
 .social {
 	display: flex;
@@ -248,18 +250,23 @@ header {
 	line-height: 1.313;
 }
 
-.sand span {
-	position: relative;
-	display: block;
+.sand-link {
+	display: inline-block;
+	height: 30px;
+}
+.sand {
+	/*position: relative;*/
+	display: inline-block;
 	width: 41px;
 	height: 5px;
 	background: var(--primary-white-color);
 
 	transition: transform 250ms;
 }
-.sand span:before,
-.sand span:after {
-	position: absolute;
+.sand:before,
+.sand:after {
+
+	/*position: absolute;*/
 	display: block;
 	content:"";
 	width: 41px;
@@ -267,24 +274,23 @@ header {
 	background: var(--primary-white-color);
 	display: block;
 }
-.sand span:before {
-	top: -13px;
+.sand:before {
+	margin-top: 13px;
 }
-.sand span:after {
-	bottom: -13px;
+.sand:after {
+	margin-top: -31px;
 }
-.sand span:hover:before {
-	transform: rotate(90deg);
+.sand-link:hover .sand:before {
+	transform: rotate(90deg) translateX(-12px);
 	top: 0;
 }
-.sand span:hover {
+.sand-link:hover .sand {
 	transform: rotate(-45deg);
 	top: 50%;
 }
-.sand span:hover:after {
+.sand-link:hover .sand:after {
 	opacity: 0;
 }
-
 
 /*герой*/
 .hero {
@@ -293,12 +299,20 @@ header {
 	margin: 0 auto 35px auto;
 	max-width: 1910px;
 	min-height: 100vh;
+}
+
+.hero-bg-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	background: linear-gradient(
 			rgb(0, 0, 0, .6),
 			rgb(0, 0, 0, .6)
 		), url(../img/hero-bg.jpg) no-repeat fixed;
 	background-size: cover;
-	}
+}
 .hero-container {
 	display: flex;
 	flex-direction: column;
@@ -306,15 +320,14 @@ header {
 	justify-content: center;
 }
 .hero-title {
-	width: 1062px;
 	margin-bottom: 40px;
-	font: 700 42px/1.2 OpenSans, sans-serif;
+	font: 700 42px/1.2 Open Sans, sans-serif;
 	text-align: center;
 }
 .hero-text {
 	width: 840px;
 	margin-bottom: 60px;
-	font: 400 20px/1.5 OpenSans, sans-serif;
+	font: 400 20px/1.5 Open Sans, sans-serif;
 	text-align: center;
 }
 .hero-btn {
@@ -325,26 +338,23 @@ header {
 	padding: 18px 52px;
 	background-color: var(--bg-btn-color);
 	border-radius: 25px;
-	font: 400 14px/0.938 OpenSans, sans-serif;
+	font: 400 14px/0.938 Open Sans, sans-serif;
 	text-transform: uppercase;
 }
 .arrow {
 	position: absolute;
 	bottom: 24px;
 	left: 50%;
-
-	display: block;
+	transform: translateX(-50%);
+	display: inline-block;
 	width: 24px;
-	height: 24px;
 }
 .arrow:hover {
-	transform: translateY(20%);
+	transform: translate(-50%, 20%);
 	cursor: pointer;  
 }
 .arrow:before {
-	position: absolute;
-	bottom: 6px;
-  right: 50%;
+	margin-bottom: 5px;
 	content: "";
 	display: block;
 	width: 24px;
@@ -355,9 +365,7 @@ header {
   transform: rotate(45deg);
 }
 .arrow:after {
-	position: absolute;
-	bottom: -6px;
-  right: 50%;
+	margin-top: -20px;
 	content: "";
 	display: block;
 	width: 24px;
@@ -382,15 +390,16 @@ header {
 	width: calc(100% / 7);
 	height: 413px;
 }
-.services-list-item:hover {
+.services-list-item:hover .servise-img {
 	transform: scale(0.85);
 }
-.services-list-item img {
+.servise-img {
 	width: 100%;
 	height: 100%;
 	filter: brightness(45%);
 	object-fit: cover;
 	object-position: 15%;
+	transition: all 300ms linear;
 }
 
 .services-title {
@@ -399,7 +408,7 @@ header {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 235px;
-	font: 700 18px/2 OpenSans, sans-serif;
+	font: 700 18px/2 Open Sans, sans-serif;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -422,14 +431,25 @@ header {
 
 /*преимущества*/
 .advantages {
-	max-width: 1910px;
+	width: 1910px;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-left: auto;
 	margin-right: auto;
-	background-image: linear-gradient(
+/*	background-image: linear-gradient(
 			rgb(0, 0, 0, .6),
 			rgb(0, 0, 0, .6)
+		),
+	url(../img/advant-bg.jpg);
+	background-size: cover;*/
+}
+.advant-bg-box {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		rgb(0, 0, 0, .6),
+		rgb(0, 0, 0, .6)
 		),
 	url(../img/advant-bg.jpg);
 	background-size: cover;
@@ -441,7 +461,7 @@ header {
 }
 .advantages-title {
 	margin-bottom: 44px;
-	font: 700 30px/1.2 OpenSans, sans-serif;
+	font: 700 30px/1.2 Open Sans, sans-serif;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -449,7 +469,7 @@ header {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	font: 600 16px/1.625 OpenSans, sans-serif;
+	font: 600 16px/1.625 Open Sans, sans-serif;
 	text-transform: uppercase;
 	text-align: left;
 
@@ -471,7 +491,7 @@ header {
 	counter-increment: list-counter 01;
 	content: "0" counter(list-counter) ' ';
 	margin-right: 24px;
-	font: 300 52px/0.5 OpenSans, sans-serif;
+	font: 300 52px/0.5 Open Sans, sans-serif;
 	text-transform: uppercase;
 }
 
@@ -537,11 +557,11 @@ header {
 	top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font: 300 26px/1.607 OpenSans, sans-serif;
+  font: 300 26px/1.607 Open Sans, sans-serif;
 	text-transform: uppercase;
 }
 .title-emphasis {
-	font: 300 48px/1.2 OpenSans, sans-serif;
+	font: 300 48px/1.2 Open Sans, sans-serif;
 }
 
 /*форма индивидульный заказ*/
@@ -552,7 +572,7 @@ header {
 	margin-bottom: 40px;
 	font-size: 30px;
 	color: rgb(0, 0, 0);
-	font: 700 30px/1.4 OpenSans, sans-serif;
+	font: 700 30px/1.4 Open Sans, sans-serif;
 	text-transform: uppercase;
 }
 .form-field {
