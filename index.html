@@ -2,13 +2,16 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Merx</title>
 	
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 	
 	
     <link rel="stylesheet" href="./css/resetstyles.css">
+    
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/adaptive.css">
 </head>
 <body>
 	<header>
@@ -35,6 +38,10 @@
 					</a>
 				</li>
 			</ul>
+
+			<a href="" class="search-mobile">
+				<img src="./img/search-white.png" alt="поиск">
+			</a>
 
 			<form class="search">
 				<input type="text" class="search-input" id="search" placeholder=" ">
@@ -139,10 +146,10 @@
 					<li class="clients-list-item">
 						<img src="./img/matrix-logo.png" alt="логотип клиента">
 					</li>
-					<li class="clients-list-item">
+					<li class="clients-list-item clients-mob">
 						<img src="./img/cosmedix-logo.png" alt="логотип клиента">
 					</li>
-					<li class="clients-list-item">
+					<li class="clients-list-item clients-mob">
 						<img src="./img/caudalie-logo.png" alt="логотип клиента">
 					</li>
 					<li class="clients-list-item">
@@ -188,6 +195,10 @@
 
 		<!-- индивидуальный подход -->
 		<section class="indiv-approach">
+			<div class="indiv-appr-thumb">
+				<img class="mob-bg" src="./img/indiv-appr-bg.jpg" alt="">
+			</div>
+			
 			<div class="container">
 
 				<div class="approach-box-title">
@@ -206,7 +217,7 @@
 								<label for="username" class="form-label">Имя</label>
 							</div>
 
-							<div class="form-field">
+							<div class="form-field form-tell">
 								<input type="tel" name="tel" id="usertel" class="form-input" placeholder=" ">
 								<label for="usertel" class="form-label">Телефон</label>
 							</div>

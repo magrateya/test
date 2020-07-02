@@ -34,7 +34,8 @@ p {
 }
 img {
 	display: block;
-	/* max-width: 100%; */
+	max-width: 100%; 
+	height: auto;
 }
 a {
 	text-decoration: none;
@@ -62,8 +63,8 @@ body {
 	height: 100%;
 	padding: 0 15px 0 15px;
 	margin: 0 auto 0 auto;
-
 }
+
 
 /*шапка*/
 header {
@@ -80,7 +81,7 @@ header {
 	padding: 32px 15px 32px 15px;
 }
 .logo-link {
-	margin-right: 85px;
+	/*margin-right: 85px;*/
 }
 .tel-numbers {
 	margin-right: 78px;
@@ -224,31 +225,31 @@ header {
 
 .log-in-icon {
 	display: inline-block;
-	margin-right: 14px;
-	width: 14px;
-	height: 14px;
+	
+	width: 25px;
+	height: 25px;
+
 	background-image: url(../img/log-in.png);
 	background-size: contain;
 }
 .log-in-text {
-	display: inline-block;
+	display: none;
 }
 .log-in {
 	display: flex;
 	align-items: center;
-	padding: 7px 25px 7px 11px;
-	min-width: 99px;
-	height: 29px;
-	margin-right: 60px;
-	border-radius: 25px;
+	
+	padding: 6px 8px 5px 5px;
+	width: 38px;
+  	height: 36px;
+	border-radius: 15px;
+
 	background-color: var(--bg-btn-color);
 	box-shadow: 0px 0px 2px 0px rgba(1, 0, 0, 0.25);
 	
-	font-size: 10px;
-	color: rgb(255, 255, 255);
-	text-transform: uppercase;
-	line-height: 1.313;
 }
+
+
 
 .sand-link {
 	display: inline-block;
@@ -299,6 +300,8 @@ header {
 	margin: 0 auto 35px auto;
 	max-width: 1910px;
 	min-height: 100vh;
+
+	height: 1080px;
 }
 
 .hero-bg-box {
@@ -325,8 +328,9 @@ header {
 	text-align: center;
 }
 .hero-text {
-	width: 840px;
-	margin-bottom: 60px;
+	/*width: 840px;*/
+	margin-bottom: 55px;
+	/*margin-bottom: 60px;*/
 	font: 400 20px/1.5 Open Sans, sans-serif;
 	text-align: center;
 }
@@ -381,14 +385,16 @@ header {
 	max-width: 1910px;
 	margin: 0 auto;
 }
-.services-list {
+/*.services-list {
 	display: flex;
-}
+}*/
 .services-list-item {
 	position: relative;
 
-	width: calc(100% / 7);
-	height: 413px;
+	height: 205px;
+
+	/*width: calc(100% / 7);
+	height: 413px;*/
 }
 .services-list-item:hover .servise-img {
 	transform: scale(0.85);
@@ -418,7 +424,7 @@ header {
 .clients {
 	max-width: 1910px;
 	margin: 0 auto;
-	height: 188px;
+	/*height: 188px;*/
 	background-color: var(--primary-white-color);
 }
 .clients-list {
@@ -427,6 +433,13 @@ header {
 	align-items: center;
 	justify-content: space-around;
 	background-color: var(--bg-clients-color);
+}
+
+.clients-list-item {
+	display: none;
+}
+.clients-list-item.clients-mob {
+	display: block;
 }
 
 /*преимущества*/
@@ -466,8 +479,6 @@ header {
 	text-align: center;
 }
 .advantages-list {
-	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
 	font: 600 16px/1.625 Open Sans, sans-serif;
 	text-transform: uppercase;
@@ -480,11 +491,8 @@ header {
 	display: flex;
 	align-items: center;
 	margin-bottom: 25px;
-	padding: 53px 36px 56px 33px;
-
-	width: calc((100% - 25px) / 2);
+	padding-left: 30px;
 	min-height: 148px;
-
 	background-color: rgb(0, 0, 0, .4);
 }
 .advantages-list-item:before {
@@ -498,9 +506,7 @@ header {
 .advantages-list-item:nth-child(2n) {
 	margin-right: 0px;
 }
-.advantages-list-item:nth-last-child(-n + 2) {
-	margin-bottom: 0px;
-}
+
 
 /*индивидупльный подход*/
 
@@ -511,7 +517,7 @@ header {
 	margin-right: auto;
 	background-color: var(--primary-white-color);
 }
-.indiv-approach:before {
+/*.indiv-approach:before {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -520,19 +526,41 @@ header {
 	width: 850px;	
 	height: 513px;
 	background-color: black;
+}*/
+
+.indiv-appr-thumb {
+	width: 100%;
+	height: 513px;
+	position: absolute;
+	top: 120px;
 }
+.mob-bg {
+	width: 100%;
+	height: 100%;
+	object-fit: none;
+	object-position: 30% 70%;
+}
+
 .indiv-approach .container {
-	display: flex;
+	/*display: flex;
 	align-items: center;
-	justify-content: space-between;
-	padding-top: 108px;
-	padding-bottom: 122px;
+	justify-content: space-between;*/
+	/*padding-top: 108px;
+	padding-bottom: 122px;*/
+
+	/*padding-top: 120px;*/
+	padding-top: 160px;
+	padding-bottom: 120px;
 }
+
+
+
 .approach-box-title {
 	position: relative;
 	padding: 140px 68px 142px 36px;
-	width: 654px;
+	max-width: 654px;
 	height: 430px;
+	margin-bottom: 80px;
 /*	background-image: linear-gradient(
 			rgb(0, 0, 0, .6),
 			rgb(0, 0, 0, .6)
@@ -555,25 +583,27 @@ header {
 .indiv-approach-title {
 	position: absolute;
 	top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font: 300 26px/1.607 Open Sans, sans-serif;
+  	left: 50%;
+ 	transform: translate(-50%, -50%);
+ 	font: 300 26px/1.607 Open Sans, sans-serif;
 	text-transform: uppercase;
 }
 .title-emphasis {
-	font: 300 48px/1.2 Open Sans, sans-serif;
+	font: 300 36px/1.2 Open Sans, sans-serif;
 }
 
 /*форма индивидульный заказ*/
-.form-box {
-	max-width: 375px;
-}
+/*.form-box {
+	text-align: center;
+}*/
+
 .form-title {
 	margin-bottom: 40px;
 	font-size: 30px;
 	color: rgb(0, 0, 0);
 	font: 700 30px/1.4 Open Sans, sans-serif;
 	text-transform: uppercase;
+	text-align: center;
 }
 .form-field {
 	position: relative;
@@ -583,11 +613,17 @@ header {
 	font-size: 12px;
 	color: rgb(0, 0, 0);
 	line-height: 1.094;
+} 
+.form-tell {
+	margin-bottom: 20px;
 }
+
 .form-input {
-	padding: 22px 20px;
+	padding: 20px 20px;
 	
-	width: 361px;
+	/*width: 361px;*/
+
+	width: 100%;
 	border-radius: 50px;
 	border: 1px solid;
 }
@@ -599,7 +635,9 @@ header {
 }
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
-	transform: translateX(-75px);
+	/*transform: translateX(-75px);*/
+
+	transform: translateY(-42px);
 }
 
 .submit {

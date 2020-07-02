@@ -1,0 +1,182 @@
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 1169px) {
+  .tel-numbers {
+    display: none;
+  }
+
+  .social {
+    display: none;
+  }
+
+  .search {
+  	display: none;
+  }
+
+  .lang {
+  	display: none;
+  }
+
+  .arrow {
+  	display: none;
+  }
+
+  .services .container {
+  	padding: 0;
+
+/*????????????????????????????*/
+  	width: 100%;
+  }
+
+  .clients .container {
+  	padding: 0;
+
+/*????????????????????????????*/
+  	width: 100%;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .search-mobile {
+    display: none;;
+  }
+}
+
+
+
+
+
+
+@media screen and (min-width: 1170px) {
+  .container {
+    width: 1170px;
+  }
+
+    /*шапка*/
+
+   
+  .logo-link {
+	margin-right: 85px;
+	}
+
+  .log-in-icon {
+	display: inline-block;
+	margin-right: 14px;
+	width: 14px;
+	height: 14px;
+
+	background-image: url(../img/log-in.png);
+	background-size: contain;
+	}
+.log-in-text {
+	display: inline-block;
+	
+	}
+.log-in {
+	padding: 7px 25px 7px 11px;
+	min-width: 99px;
+	height: 29px;
+	margin-right: 60px;
+	border-radius: 25px;
+		
+	font-size: 10px;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	line-height: 1.313;
+	}
+
+	/*герой*/
+
+	.hero-text {
+	margin-bottom: 60px;
+	}
+
+	/*услуги*/
+
+	.services-list {
+	display: flex;
+	}
+
+	.services-list-item {
+	
+	width: calc(100% / 7);
+	height: 413px;
+	}
+
+	/*клиенты*/
+	.clients-list-item {
+	display: block;
+	}
+
+
+	/*преимущества*/
+
+	.advantages-list {
+	display: flex;
+	flex-wrap: wrap;
+	}
+
+	.advantages-list-item {
+	padding: 53px 36px 56px 33px;
+	width: calc((100% - 25px) / 2);
+	}
+
+	.advantages-list-item:nth-last-child(-n + 2) {
+	margin-bottom: 0px;
+	}
+
+	/*индивидуальный подход*/
+	.indiv-appr-thumb {
+		display: none;
+	}
+
+	.approach-box-title {
+		margin-bottom: 0;
+		width: 654px;
+	}
+
+	.indiv-approach:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 65px;
+	display: block;
+	width: 850px;	
+	height: 513px;
+	background-color: black;
+	}
+
+	.indiv-approach .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 108px;
+	padding-bottom: 122px;
+
+	padding-top: 120px;
+	padding-bottom: 120px;
+	}
+
+	.form-box {
+	max-width: 375px;
+	}
+
+	.form-title {
+	text-align: left;
+}
+
+	.form-input {
+	width: 361px;
+	}
+
+	.form-input:focus + .form-label,
+	.form-input:not(:placeholder-shown) + .form-label {
+	transform: translateX(-75px);
+	}
+
+}
+
