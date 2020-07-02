@@ -557,7 +557,7 @@ header {
 
 .approach-box-title {
 	position: relative;
-	padding: 140px 68px 142px 36px;
+	/*padding: 140px 68px 142px 36px;*/
 	max-width: 654px;
 	height: 430px;
 	margin-bottom: 80px;
@@ -585,7 +585,7 @@ header {
 	top: 50%;
   	left: 50%;
  	transform: translate(-50%, -50%);
- 	font: 300 26px/1.607 Open Sans, sans-serif;
+ 	font: 300 30px/1.607 Open Sans, sans-serif;
 	text-transform: uppercase;
 }
 .title-emphasis {
@@ -635,9 +635,9 @@ header {
 }
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
-	/*transform: translateX(-75px);*/
-
-	transform: translateY(-42px);
+		
+	font-size: 10px;
+	transform: translateY(-40px);
 }
 
 .submit {
