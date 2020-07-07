@@ -96,12 +96,9 @@
 /*????????????????????????????*/
   	width: 100%;
   }
-
-@media screen and (min-width: 1170px) {
-  .search-mobile {
-    display: none;
-  }
 }
+
+
 
 /*????????????????????????????????????????*/
 @media screen and (max-width: 767px) {
@@ -122,6 +119,11 @@
 	}
 }
 
+@media screen and (min-width: 1170px) {
+  .search-mobile {
+    display: none;
+  }
+}
 
 
 @media screen and (min-width: 1170px) {
@@ -145,11 +147,11 @@
 	background-image: url(../img/log-in.png);
 	background-size: contain;
 	}
-.log-in-text {
+  .log-in-text {
 	display: inline-block;
-	
 	}
-.log-in {
+
+  .log-in {
 	padding: 7px 25px 7px 11px;
 	min-width: 99px;
 	height: 29px;
@@ -245,7 +247,7 @@
 
 	.form-title {
 	text-align: left;
-}
+	}
 
 	.form-input {
 	width: 361px;
